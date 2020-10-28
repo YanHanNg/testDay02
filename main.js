@@ -2,7 +2,7 @@ const express = require('express');
 const hbs = require('express-handlebars');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = parseInt(process.env.PORT) || 3000;
 
 app.engine('hbs', hbs({defaultLayout: 'default.hbs'}));
 app.set('view engine', 'hbs');
